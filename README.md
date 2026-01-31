@@ -16,3 +16,20 @@ Promises do not run callbacks immediately
 They use the Microtask Queue from Event Loop:
 
 ![Promise Image](/promise.png)
+
+## Chained Promises
+
+The promise methods then(), catch() and finally() are used to associate further action with a promise that becomes settled.
+
+```js
+const minhaPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+minhaPromise
+  .then(handleFulfilledA, handleRejectedA)
+  .then(handleFulfilledB, handleRejectedB)
+  .then(handleFulfilledC, handleRejectedC);
+```
