@@ -33,3 +33,5 @@ minhaPromise
   .then(handleFulfilledB, handleRejectedB)
   .then(handleFulfilledC, handleRejectedC);
 ```
+
+## How promises works in event loop
