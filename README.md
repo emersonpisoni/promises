@@ -38,7 +38,11 @@ Previous examples of implementation:
 - Scala Futures
 - C# Tasks
 
+## Todos
 
+- Clarify the problems with callbacks
+- Show examples with Promise.all, Promise.any, Promise.race...
+- .then() always go to microtask queue in event loop (compare with Zalgo - sync and async)
 
 ---
 
