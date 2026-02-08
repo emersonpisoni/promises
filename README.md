@@ -43,6 +43,7 @@ Previous examples of implementation:
 - Clarify the problems with callbacks
 - Show examples with Promise.all, Promise.any, Promise.race...
 - .then() always go to microtask queue in event loop (compare with Zalgo - sync and async)
+- Maybe show event loop freezing with main queue blocked
 
 ---
 
