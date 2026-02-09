@@ -44,6 +44,7 @@ Previous examples of implementation:
 - Show examples with Promise.all, Promise.any, Promise.race...
 - .then() always go to microtask queue in event loop (compare with Zalgo - sync and async)
 - Maybe show event loop freezing with main queue blocked
+- Show tradeoffs with Promises
 
 ---
 
