@@ -1,3 +1,5 @@
+// callback hell example
+
 getUser(id, (err, user) => {
   if (err) return handle(err)
 
@@ -13,11 +15,7 @@ getUser(id, (err, user) => {
 })
 
 // nesting depth grows with each step
-
 // duplicated error checks
-
 // hard to rearrange steps
-
 // hard to reuse intermediate logic
-
 // control flow tied to indentation
