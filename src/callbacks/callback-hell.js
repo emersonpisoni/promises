@@ -1,5 +1,3 @@
-// callback hell example
-
 getUser(id, (err, user) => {
   if (err) return handle(err)
 
