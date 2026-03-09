@@ -1,3 +1,5 @@
+import { task } from "../util.js";
+
 Promise.any([
   task("Fail1", 1000, true),
   task("Fail2", 1500, true),

@@ -1,3 +1,5 @@
+import { task } from "../util.js";
+
 Promise.allSettled([
   task("A", 1000),
   task("B", 2000, true),

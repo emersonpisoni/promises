@@ -1,3 +1,5 @@
+import { task } from "../util.js";
+
 Promise.race([
   task("Slow", 3000),
   task("Fast", 1000)

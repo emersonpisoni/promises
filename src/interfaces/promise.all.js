@@ -1,6 +1,8 @@
+import { task } from "../util.js";
+
 Promise.all([
   task("A", 1000),
-  task("B", 2000),
+  task("B", 2000, true),
   task("C", 1500)
 ])
   .then(results => {

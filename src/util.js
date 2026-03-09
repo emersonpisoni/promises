@@ -1,4 +1,4 @@
-function task(name, delay, shouldFail = false) {
+export function task(name, delay, shouldFail = false) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (shouldFail) {
