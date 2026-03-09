@@ -1,33 +1,30 @@
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+function getUser() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("User fetched");
+      resolve({ id: 1, name: "Alice" });
+    }, 1000);
+  });
 }
 
-export async function makeCoffee() {
-  console.log("1) Start making coffee...");
-
-  // This "pauses" ONLY this async function (not the whole JS runtime)
-  await delay(1000);
-  console.log("2) Water boiled");
-
-  await delay(800);
-  console.log("3) Coffee brewed");
-
-  return "☕ Coffee ready";
+function getOrders() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("Orders fetched");
+      resolve(["order1", "order2"]);
+    }, 1000);
+  });
 }
 
-async function runAsyncAwait() {
-  console.log("\n=== Using async/await ===");
+async function run() {
+  try {
+    await getUser();
+    const orders = await getOrders();
 
-  console.log("A) Program start");
-
-  const coffeePromise2 = makeCoffee();
-
-  console.log("B) Doing other work...");
-
-  const coffee = await coffeePromise2;
-
-  console.log("C) Result:", coffee);
-  console.log("D) Program end");
+    console.log("Orders:", orders);
+  } catch (err) {
+    console.log("Error:", err);
+  }
 }
 
-runAsyncAwait();
+run();
